@@ -1,0 +1,71 @@
+img.bg
+{
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+@media screen and (max-width:1024px)
+{
+    img.bg{
+        left: 50%;
+        margin-left: -512;
+    }
+}
+.heading
+{
+    color: chocolate;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+ 
+    #mybutton {
+        background-color: #004A7F;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        border: none;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Arial;
+        font-size: 20px;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        -webkit-animation: glowing 1500ms infinite;
+        -moz-animation: glowing 1500ms infinite;
+        -o-animation: glowing 1500ms infinite;
+        animation: glowing 1500ms infinite;
+      }
+      @-webkit-keyframes glowing {
+        0% { background-color: rgba(0, 136, 178, 0.13); -webkit-box-shadow: 0 0 3px #B20000; }
+        50% { background-color: rgb(116, 178, 0); -webkit-box-shadow: 0 0 40px #FF0000; }
+        100% { background-color: rgb(0, 136, 178); -webkit-box-shadow: 0 0 3px #B20000; }
+      }
+      
+      @-moz-keyframes glowing {
+        0% { background-color: rgb(0, 136, 178); -moz-box-shadow: 0 0 3px #B20000; }
+        50% { background-color: rgb(0, 136, 178); -moz-box-shadow: 0 0 40px #FF0000; }
+        100% { background-color: rgb(0, 136, 178); -moz-box-shadow: 0 0 3px #B20000; }
+      }
+      
+      @-o-keyframes glowing {
+        0% { background-color: rgb(0, 136, 178); box-shadow: 0 0 3px #B20000; }
+        50% { background-color: rgb(0, 136, 178); box-shadow: 0 0 40px #FF0000; }
+        100% { background-color: rgb(0, 136, 178); box-shadow: 0 0 3px #B20000; }
+      }
+      
+      @keyframes glowing {
+        0% { background-color: rgb(0, 136, 178); box-shadow: 0 0 3px #B20000; }
+        50% { background-color:rgb(0, 136, 178); box-shadow: 0 0 40px #FF0000; }
+        100% { background-color: rgb(0, 136, 178); box-shadow: 0 0 3px #B20000; }
+      }
+    

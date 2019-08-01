@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+  <h1 align=center class="heading">
+    Welcome to {{ title }}!
+  </h1>
+  
+    <div class="navbar">
+      <button class="btn btn-success" (click)=redirecrSkill()>Get Perticular Trainer Skill</button>
+      <button class="btn btn-primary" (click)=mostSkilled()>Find Most Versatile Trainer</button>
+      <button class="btn btn-success" (click)=deleteSkill()>Delete SKill Operation</button>
+      <button class="btn btn-primary" (click)=addskill()>Add SKill Operation</button>
+      <button class="btn btn-success" (click)=skillBased()>Skill Based Count</button>
+
+
+    </div>
+    <div *ngIf="mycheck" align=center>
+<br><br><br><br>
+      <h2 >Trainer Skill Management Module</h2>
+      <!-- class="btn btn-danger btn-lg" -->
+      <br> <br><br>
+      <h4 style="color: darkcyan">Let's Start Managing Trainer Skills</h4>
+      
+      <button  id="mybutton" (click)=redirecrSkill()>Click To Get Started</button>
+
+    <!-- <img src=".\assets\front.png" width="500px" height="350px"/> -->
+    </div>
+  
+  <img src=".\assets\pexelimg.jpeg" class="bg"/>
+   <!-- <app-my-controller></app-my-controller> -->
+
+<router-outlet></router-outlet>

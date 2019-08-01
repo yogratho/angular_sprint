@@ -1,0 +1,28 @@
+<div *ngIf="check">
+    <h1 align=center style="color:tomato">Skill Based Count Operation</h1>
+    <div class="container">
+        <form #trainerForm="ngForm">
+            <div class="form-group">
+                    <label>Enter Skill </label>
+                    <input #tid="ngModel" type="text"  required [class.is-invalid]="tid.invalid && tid.touched" class="form-control" placeholder="Enter Skill For Count Number Of Trainers" name="trainerId" [(ngModel)]="skill"/>
+                    <div *ngIf="tid.errors && (tid.invalid || tid.touched)">
+                            <small class="text-danger" *ngIf="tid.errors.required && tid.touched" >Skill Field is Required</small>
+                            <!-- <small class="text-danger" *ngIf="tid.errors.pattern" >Employee Id Should not start with zero and max length is 5</small> -->
+                    
+                    
+                        </div>
+            </div>
+            <button class="btn btn-primary"  (click)= count()>Get Count Of Trainers</button>
+
+        </form>
+</div> 
+  
+   
+
+  
+
+</div>
+<div *ngIf="response">
+<h2 align=center style="color: red">{{message}}</h2>
+
+</div>

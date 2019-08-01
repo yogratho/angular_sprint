@@ -1,0 +1,37 @@
+<div >
+    <h1 align=center style="color:tomato">Trainer Skill DashBoard</h1>
+    <div class="container">
+        <form #trainerForm="ngForm">
+            <div class="form-group">
+                    <label>Employee Id</label>
+                    <input #tid="ngModel" type="text"  required [class.is-invalid]="tid.invalid && tid.touched" class="form-control" placeholder="Enter Your ID " name="trainerId" [(ngModel)]="Id"/>
+                    <div *ngIf="tid.errors && (tid.invalid || tid.touched)">
+                            <small class="text-danger" *ngIf="tid.errors.required && tid.touched" >Employee Id is Required</small>
+                            <!-- <small class="text-danger" *ngIf="tid.errors.pattern" >Employee Id Should not start with zero and max length is 5</small> -->
+                    
+                    
+                        </div>
+            </div>
+            <button class="btn btn-primary"  (click)=showSkills()>Get Skills</button>
+
+        </form>
+</div> 
+<div *ngIf="response" align=center>
+   <small  class="alert alert-danger" align=center>{{errorMessage}}</small>
+</div>
+   
+   <div *ngIf="check" align=center>
+    <h2 >Trainers Details Are AS...</h2>
+    <table border="3px solid black" border-collapse>
+       <tr class="black white-text"> <th>ID</th>
+        <th>EmployeeId</th>
+        <th>SkillDesc</th></tr>
+        <tr *ngFor="let obj of skillObj">
+    <td style="color:darkblue">{{obj.id}}</td>
+    <td style="color:darkblue">{{obj.employeeId}}</td>
+    <td style="color: darkblue">{{obj.skillDesc}}</td>
+        </tr>
+    </table>
+</div>
+
+</div>

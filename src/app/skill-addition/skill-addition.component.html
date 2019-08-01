@@ -1,0 +1,38 @@
+<div *ngIf="check">
+        <h1 align=center style="color:tomato">Trainer Skill Addition DashBoard</h1>
+        <div class="container">
+            <form #trainerForm="ngForm">
+                <div class="form-group">
+                        <label>Enter Employee Id</label>
+                        <input #tid="ngModel" type="text"  required [class.is-invalid]="tid.invalid && tid.touched" class="form-control" placeholder="Enter Your ID " name="trainerId" [(ngModel)]="Id"/>
+                        <div *ngIf="tid.errors && (tid.invalid || tid.touched)">
+                                <small class="text-danger" *ngIf="tid.errors.required && tid.touched" >Employee Id is Required</small>
+                                <!-- <small class="text-danger" *ngIf="tid.errors.pattern" >Employee Id Should not start with zero and max length is 5</small> -->
+                        
+                        
+                            </div>
+                </div>
+                <div class="form-group">
+                        <label>Enter Employee Skill To Add</label>
+                        <input #sid="ngModel" type="text"  required [class.is-invalid]="sid.invalid && sid.touched" class="form-control" placeholder="Enter Skill To be Deleted" name="skill" [(ngModel)]="skillDesc"/>
+                        <div *ngIf="sid.errors && (sid.invalid || sid.touched)">
+                                <small class="text-danger" *ngIf="sid.errors.required && sid.touched" >Skill Description is Required</small>
+                                <!-- <small class="text-danger" *ngIf="tid.errors.pattern" >Employee Id Should not start with zero and max length is 5</small> -->
+                        
+                        
+                            </div>
+                </div>
+                <button [disabled]="sid.invalid || tid.invalid" class="btn btn-primary"  (click)= addSkills()>Add Skill</button>
+    
+            </form>
+    </div> 
+      
+       
+       
+      
+    
+    </div>
+    <div *ngIf="response">
+<h2 align=center style="color: red">{{message}}</h2>
+
+    </div>
